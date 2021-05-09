@@ -13,9 +13,9 @@ import sys
 if len(sys.argv) != 3:
     print(" Usage: ")
     print(f'{sys.argv[0]} <your_reg_string>  <lower|upper|title' )
-    sys.exit()
+    sys.exit()              # to stop the script
 
-usr_str = sys.argv[1]       # takeing arguments without using input 
+usr_str = sys.argv[1]       # taking arguments without using input 
 usr_action = sys.argv[2]
 
 if usr_action == 'lower':
