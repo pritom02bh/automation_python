@@ -4,12 +4,18 @@
 # print(sys.modules)      # By default, python is importing these modules
 # print(sys.path)         # Path
 
-# sys.exit()              # this is a function to Stop python
+# sys.exit()                # this is a function to Stop python
 
 # print(sys.argv)           # To get command line arguments inside the script.
 
 import sys
-usr_str = sys.argv[1]
+
+if len(sys.argv) != 3:
+    print(" Usage: ")
+    print(f'{sys.argv[0]} <your_reg_string>  <lower|upper|title' )
+    sys.exit()
+
+usr_str = sys.argv[1]       # takeing arguments without using input 
 usr_action = sys.argv[2]
 
 if usr_action == 'lower':
@@ -20,3 +26,11 @@ elif usr_action == 'title':
     print(usr_str.title())
 else:
     print("Your Option is Invalid !!!! ")
+
+
+'''
+>> Command line arguments
+>> E:\automation_python\modules_python>python sys_module.py "Hello people" upper
+>> HELLO PEOPLE
+
+'''
